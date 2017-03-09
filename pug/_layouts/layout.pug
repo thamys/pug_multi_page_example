@@ -1,0 +1,30 @@
+doctype html
+//if lt IE 7
+    html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+    html.no-js.lt-ie9.lt-ie8
+//if IE 8
+    html.no-js.lt-ie9
+// [if gt IE 8] <!
+html.no-js
+    // <![endif]
+    include ../_partials/head
+    body
+        #fh5co-page
+            include ../_partials/header
+            block content
+                // Todo o Conteúdo aqui
+            include ../_partials/footer
+        // jQuery
+        block theme-js
+            script(src='js/jquery.min.js')
+            // jQuery Easing
+            script(src='js/jquery.easing.1.3.js')
+            // Bootstrap
+            script(src='js/bootstrap.min.js')
+            // Waypoints
+            script(src='js/jquery.waypoints.min.js')
+            // Flexslider
+            script(src='js/jquery.flexslider-min.js')
+            // MAIN JS
+            script(src='js/main.js')

@@ -1,0 +1,11 @@
+mixin slider(title, lead, image)
+    aside#fh5co-hero.js-fullheight
+        .flexslider.js-fullheight
+            ul.slides
+                li(style='background-image: url(images/'+image+');')
+                    .overlay-gradient
+                    .container
+                        .col-md-10.col-md-offset-1.text-center.js-fullheight.slider-text
+                            .slider-text-inner
+                                h2=title
+                                p.fh5co-lead!=lead
