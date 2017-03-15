@@ -2,73 +2,27 @@ extends _layouts/layout
 block content
 	include _blocks/slider
 	+slider("Our Awesome Projects", "Designed with <i class='icon-heart'></i> by the fine folks at <a href='http://freehtml5.co' target='_blank'>FreeHTML5.co</a>", "slide_3.jpg")
-block conent
 	#fh5co-work-section.fh5co-light-grey-section
 		.container
 			.row
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_1.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Web Application
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_2.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category User Interface
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_3.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Branded
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_4.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Web
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_5.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Illustration
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_6.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Web Application
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_7.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Web Application
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_8.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Web Application
-				.col-md-4.animate-box
-					a.item-grid.text-center(href='#')
-						.image(style='background-image: url(images/image_9.jpg)')
-						.v-align
-							.v-align-middle
-								h3.title Geographical App
-								h5.category Web Application
+				mixin animate-box(image, title, category)
+					.col-md-4.animate-box
+						a.item-grid.text-center(href='#')
+							.image(style='background-image: url(images/'+ image +')')
+							.v-align
+								.v-align-middle
+									h3.title= title
+									h5.category= category
+				+animate-box('image_1.jpg', 'Geographical App', 'Web Application')
+				+animate-box('image_2.jpg', 'Geographical App', 'User Interface')
+				+animate-box('image_3.jpg', 'Geographical App', 'Branded')
+				+animate-box('image_4.jpg', 'Geographical App', 'Web')
+				+animate-box('image_5.jpg', 'Geographical App', 'Illustration')
+				+animate-box('image_6.jpg', 'Geographical App', 'Web Application')
+				+animate-box('image_7.jpg', 'Geographical App', 'Web Application')
+				+animate-box('image_8.jpg', 'Geographical App', 'Web Application')
+				+animate-box('image_9.jpg', 'Geographical App', 'Web Application')
+
 	include _blocks/before_footer
 block theme-js
 		// jQuery

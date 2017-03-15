@@ -2,136 +2,68 @@ extends _layouts/layout
 block content
 	include _blocks/slider
 	+slider("Our Expertise", "Designed with <i class='icon-heart'></i> by the fine folks at <a href='http://freehtml5.co' target='_blank'>FreeHTML5.co</a>", "slide_3.jpg")
-			#fh5co-services-section
-				.container
-					.row
-						.col-md-6.col-md-offset-3.text-center.fh5co-heading.animate-box
-							h2 Our Awesome Features
-							p
-								| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-					.row
-						.col-md-4.animate-box
-							.services
-								i.icon-laptop
-								.desc
-									h3 Dashboard
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-						.col-md-4.animate-box
-							.services
-								i.icon-server
-								.desc
-									h3 Administration
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-						.col-md-4.animate-box
-							.services
-								i.icon-money
-								.desc
-									h3 Make Money
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-						.col-md-4.animate-box
-							.services
-								i.icon-tablet
-								.desc
-									h3 SEO Monitoring
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-						.col-md-4.animate-box
-							.services
-								i.icon-line-chart
-								.desc
-									h3 Online Marketing
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-						.col-md-4.animate-box
-							.services
-								i.icon-pie-chart
-								.desc
-									h3 Business Analytics
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-					.row.fh5co-services
-						.col-md-6.col-md-offset-3.text-center.fh5co-heading.animate-box
-							h2 Our pleasure to serve you
-							p
-								| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-						.col-md-4.text-center.item-block.animate-box
-							h3 Strategy
-							p
-								| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-							p
-								a.btn.btn-primary.btn-outline.with-arrow(href='#')
-									| Learn more
-									i.icon-arrow-right
-						.col-md-4.text-center.item-block.animate-box
-							h3 Explore
-							p
-								| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-							p
-								a.btn.btn-primary.btn-outline.with-arrow(href='#')
-									| Learn more
-									i.icon-arrow-right
-						.col-md-4.text-center.item-block.animate-box
-							h3 Expertise
-							p
-								| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-							p
-								a.btn.btn-primary.btn-outline.with-arrow(href='#')
-									| Learn more
-									i.icon-arrow-right
-			#fh5co-pricing-section.fh5co-light-grey-section
-				.container
-					.row
-						.col-md-6.col-md-offset-3.text-center.fh5co-heading.animate-box
-							h2 Pricing
-							p
-								| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-					.row
-						.pricing
-							.col-md-3.animate-box
-								.price-box
-									h2.pricing-plan Starter
-									.price
-										sup.currency $
-										| 9
-										small /month
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									a.btn.btn-select-plan.btn-sm(href='#') Select Plan
-							.col-md-3.animate-box
-								.price-box
-									h2.pricing-plan Basic
-									.price
-										sup.currency $
-										| 27
-										small /month
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									a.btn.btn-select-plan.btn-sm(href='#') Select Plan
-							.col-md-3.animate-box
-								.price-box.popular
-									h2.pricing-plan.pricing-plan-offer
-										| Pro
-										span Best Offer
-									.price
-										sup.currency $
-										| 74
-										small /month
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									a.btn.btn-select-plan.btn-sm(href='#') Select Plan
-							.col-md-3.animate-box
-								.price-box
-									h2.pricing-plan Unlimited
-									.price
-										sup.currency $
-										| 140
-										small /month
-									p
-										| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
-									a.btn.btn-select-plan.btn-sm(href='#') Select Plan
+	#fh5co-services-section
+		.container
+			.row
+				.col-md-6.col-md-offset-3.text-center.fh5co-heading.animate-box
+					h2 Our Awesome Features
+					p
+						| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+			.row
+				mixin animate-box-feature(title, text)
+					.col-md-4.animate-box
+						.services
+							i.icon-laptop
+							.desc
+								h3= title
+								p= text
+				+animate-box-feature('Dashboard', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.')
+				+animate-box-feature('Administration', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.')
+				+animate-box-feature('Make Money', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.')
+				+animate-box-feature('SEO Monitoring', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.')
+				+animate-box-feature('Online Marketing', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.')
+				+animate-box-feature('Business Analytics', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.')
+
+			.row.fh5co-services
+				.col-md-6.col-md-offset-3.text-center.fh5co-heading.animate-box
+					h2 Our pleasure to serve you
+					p
+						| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+				mixin animate-box-services(title, text, link_text)
+					.col-md-4.text-center.item-block.animate-box
+						h3=title
+						p=text
+						p
+							a.btn.btn-primary.btn-outline.with-arrow(href='#')= link_text
+								i.icon-arrow-right
+				+animate-box-services('Strategy', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.', 'Learn more')
+				+animate-box-services('Explore', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.', 'Learn more')
+				+animate-box-services('Expertise', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.', 'Learn more')
+	#fh5co-pricing-section.fh5co-light-grey-section
+		.container
+			.row
+				.col-md-6.col-md-offset-3.text-center.fh5co-heading.animate-box
+					h2 Pricing
+					p
+						| Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+			.row
+				.pricing
+					mixin animate-price-box(title, price, text, popular_class)
+						.col-md-3.animate-box
+							.price-box(class=popular_class)
+								h2.pricing-plan= title
+								.price
+									sup.currency $
+									=price
+									small /month
+								p= text
+								a.btn.btn-select-plan.btn-sm(href='#') Select Plan
+
+					+animate-price-box('Starter', '9', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.')
+					+animate-price-box('Basic', '27', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.')
+					+animate-price-box('Pro', '9', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.', 'popular')
+					+animate-price-box('Unlimited', '9', 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.')
 	include _blocks/before_footer
 block theme-js
 	// jQuery
